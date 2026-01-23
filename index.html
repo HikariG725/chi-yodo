@@ -269,7 +269,19 @@
   </style>
 </head>
 <body>
-  <main>
+  <main id="gate" style="display:none;">
+    <div class="card">
+      <h1>ちいよどぽーたる</h1>
+      <p class="muted">合言葉を入力してください。</p>
+      <form id="gateForm" class="button-group" autocomplete="off" style="margin-top: 12px;">
+        <input id="pw" type="password" inputmode="text" placeholder="合言葉" aria-label="合言葉" required style="flex:1 1 260px; padding:10px 12px; border-radius:12px; border:1px solid var(--line); font-size:1rem;">
+        <button class="button" type="submit">入る</button>
+      </form>
+      <div id="error" class="fineprint" style="display:none; color:#b91c1c; font-weight:700;">合言葉が違います。</div>
+    </div>
+  </main>
+
+  <main id="portal" style="display:none;">
     <header class="hero">
       <div class="eyebrow">Chiiyodo Portal</div>
       <h1>ちいよどぽーたる</h1>
@@ -325,5 +337,66 @@
       </div>
     </section>
   </main>
+
+  <script>
+    (function () {
+      if (location.protocol === "file:") {
+        document.getElementById("portal").style.display = "";
+        return;
+      }
+
+      const AUTH_KEY = "chiiyodo_auth_v1";
+      const PASSWORD_SHA256_HEX = "d26ef39e288a2545f53b57eddcbbc712f8ac93b9a51c05254c02cad06b54785d";
+
+      function toHex(buffer) {
+        return Array.from(new Uint8Array(buffer)).map(b => b.toString(16).padStart(2, "0")).join("");
+      }
+
+      async function sha256Hex(text) {
+        const data = new TextEncoder().encode(text);
+        const digest = await crypto.subtle.digest("SHA-256", data);
+        return toHex(digest);
+      }
+
+      function safeNext(next) {
+        if (!next) return null;
+        if (!next.startsWith("/")) return null;
+        if (next.includes("\n") || next.includes("\r")) return null;
+        return next;
+      }
+
+      const params = new URLSearchParams(location.search);
+      const next = safeNext(params.get("next"));
+
+      const gate = document.getElementById("gate");
+      const portal = document.getElementById("portal");
+
+      const authed = sessionStorage.getItem(AUTH_KEY) === "1";
+      if (authed) {
+        portal.style.display = "";
+        return;
+      }
+
+      gate.style.display = "";
+
+      const form = document.getElementById("gateForm");
+      const pw = document.getElementById("pw");
+      const error = document.getElementById("error");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        error.style.display = "none";
+        const input = pw.value ?? "";
+        const hash = await sha256Hex(input);
+        if (hash !== PASSWORD_SHA256_HEX) {
+          error.style.display = "";
+          return;
+        }
+        sessionStorage.setItem(AUTH_KEY, "1");
+        pw.value = "";
+        location.assign(next || "index.html");
+      });
+    })();
+  </script>
 </body>
 </html>
