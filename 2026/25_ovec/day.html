@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第25回大阪ヴォーカルアンサンブルコンテスト 当日の動き（ちいよど）</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;600;700&display=swap");
+
+    :root {
+      --ink: #1f1d1a;
+      --muted: #5c5a57;
+      --accent: #0f766e;
+      --accent-2: #d97706;
+      --paper: #fdf8f1;
+      --card: #ffffff;
+      --line: #ece2d7;
+      --shadow: 0 10px 30px rgba(28, 22, 16, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Zen Kaku Gothic New", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      background:
+        radial-gradient(1200px 400px at 80% -10%, rgba(15, 118, 110, 0.18), transparent 60%),
+        radial-gradient(900px 380px at -10% 10%, rgba(217, 119, 6, 0.15), transparent 55%),
+        repeating-linear-gradient(135deg, rgba(17, 24, 39, 0.02) 0 2px, transparent 2px 10px),
+        var(--paper);
+      line-height: 1.7;
+    }
+
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    header.hero {
+      background: linear-gradient(120deg, #ffffff 0%, #fff7ec 45%, #fffdf9 100%);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 28px 28px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header.hero::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      right: -140px;
+      top: -160px;
+      background: rgba(15, 118, 110, 0.12);
+      filter: blur(0.5px);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-family: "Kaisei Decol", "Yu Mincho", serif;
+      font-weight: 700;
+      font-size: clamp(1.4rem, 1.6vw + 0.9rem, 2.1rem);
+      margin: 0 0 12px;
+    }
+
+    .hero-sub {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      font-size: 0.98rem;
+      color: var(--muted);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.08);
+      color: var(--accent);
+      font-weight: 600;
+      border: 1px solid rgba(15, 118, 110, 0.2);
+    }
+
+    .time-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+    }
+
+    .time-badge.official {
+      color: var(--accent);
+      background: rgba(15, 118, 110, 0.08);
+      border-color: rgba(15, 118, 110, 0.2);
+    }
+
+    .time-badge.custom {
+      color: var(--accent-2);
+      background: rgba(217, 119, 6, 0.12);
+      border-color: rgba(217, 119, 6, 0.25);
+    }
+
+    section {
+      margin-top: 26px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.15rem;
+      line-height: 1.3;
+      margin: 0 0 14px;
+    }
+
+    .section-title span {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(217, 119, 6, 0.12);
+      color: var(--accent-2);
+      font-size: 0.85rem;
+      line-height: 1.1;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid.cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid.cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 18px 16px;
+      box-shadow: 0 8px 20px rgba(28, 22, 16, 0.08);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .fineprint {
+      margin: 6px 0 0;
+      font-size: 0.85rem;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent), rgba(15, 118, 110, 0.08));
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 10px 12px 10px 18px;
+      margin-bottom: 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(236, 226, 215, 0.9);
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 18px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.15);
+    }
+
+    .time {
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 0.98rem;
+    }
+
+    .time.official {
+      color: var(--accent);
+    }
+
+    .time.custom {
+      color: var(--accent-2);
+    }
+
+    .legend {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 12px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    ul.clean {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .check {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .check::before {
+      content: "□";
+      color: var(--accent-2);
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .note {
+      background: rgba(15, 118, 110, 0.08);
+      border: 1px dashed rgba(15, 118, 110, 0.35);
+      border-radius: 14px;
+      padding: 14px 16px;
+      color: #0b4f4a;
+      font-weight: 600;
+    }
+
+    .footer {
+      margin-top: 32px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .page-break {
+      height: 0;
+      margin: 0;
+    }
+
+    .qr-wrap {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .qr-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      padding: 8px;
+      background: #fff;
+    }
+
+    .qr-url {
+      font-size: 0.9rem;
+      color: var(--muted);
+      word-break: break-all;
+    }
+
+    @media (max-width: 900px) {
+      .grid.cols-3 {
+        grid-template-columns: 1fr;
+      }
+      .grid.cols-2 {
+        grid-template-columns: 1fr;
+      }
+      header.hero {
+        padding: 22px 20px;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 4mm 24mm;
+      }
+
+      body {
+        background: #fff;
+        font-size: 10.5pt;
+      }
+
+      main {
+        max-width: none;
+        padding: 0;
+        margin: 0 auto;
+        zoom: 0.5;
+      }
+
+      header.hero {
+        box-shadow: none;
+        border-color: #d9d2c8;
+        background: #fff;
+      }
+
+      header.hero::after {
+        display: none;
+      }
+
+      .card,
+      .timeline-item,
+      .note {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .section-title {
+        font-size: 12.5pt;
+      }
+
+      h1 {
+        font-size: 16pt;
+      }
+
+      section {
+        margin-top: 16px;
+      }
+
+      .page-break {
+        break-before: page;
+        page-break-before: always;
+      }
+
+      .page-break + section {
+        margin-top: 64px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div class="eyebrow">OVEC 25th / 2026（ちいよど）</div>
+      <h1>第25回大阪ヴォーカルアンサンブルコンテスト 当日の動き</h1>
+      <div class="hero-sub">
+        <span class="pill">2026年1月31日(土) 一般部門</span>
+        <span>出演団体: ちいよど（一般部門・出演順7番）</span>
+        <span>声部: 混声 / 歌唱14名（申込時）</span>
+        <span>会場: 箕面市立メイプルホール 大ホール</span>
+        <span>開場 12:30 / 開演 13:00 / 終演 16:45(予定)</span>
+        <span>受付開始 12:00</span>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-title">服装・持ち物 <span>当日準備</span></div>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>服装</h3>
+          <ul class="clean">
+            <li class="check">上下は黒（上: 黒 / 下: 黒）</li>
+            <li class="check">靴は黒</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>必携・注意</h3>
+          <ul class="clean">
+            <li class="check">出演者証は当日の入場券扱い（各自携帯）</li>
+            <li class="check">スマートフォンは電源オフ/マナーモード</li>
+          </ul>
+          <p class="muted fineprint">※出演者証は当日配ります</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">午前練習 <span>09:00〜12:00</span></div>
+      <div class="note">
+        箕面市立中央生涯学習センター 第一会議室で練習後、メイプルホールへ移動して受付・更衣に合流します。
+        午前練習会場と本番会場は同じ建物内です（館内移動のみ）。
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">ちいよど タイムライン <span>当日</span></div>
+      <div class="legend">
+        <span class="time-badge official">公式</span>
+        <span>公式資料に記載された時刻</span>
+        <span class="time-badge custom">団体設定</span>
+        <span>暫定の目安時間。変更の場合Discord上で連絡。</span>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="time custom">09:00〜12:00 <span class="time-badge custom">団体設定</span></div>
+          <div>午前練習（中央生涯学習センター 第一会議室）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time official">12:00 <span class="time-badge official">公式</span></div>
+          <div>受付開始（ホールホワイエ）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time official">13:57 <span class="time-badge official">公式</span></div>
+          <div>最終受付（代表が受付・精算完了）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time official">14:04 <span class="time-badge official">公式</span></div>
+          <div>集合（主催側指定なし／場所は当日確認して連絡します）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time official">14:07〜14:17 <span class="time-badge official">公式</span></div>
+          <div>荷物置き場・更衣（2階・女性: 楽屋5/6/7、男性: 楽屋8〔和室〕）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time custom">14:15 <span class="time-badge custom">団体設定</span></div>
+          <div>小ホール前集合</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time official">14:20〜14:30 <span class="time-badge official">公式</span></div>
+          <div>発声（小ホール/1階）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time official">14:32 <span class="time-badge official">公式</span></div>
+          <div>待機（1階 大ホール舞台下手袖）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time official">14:37〜14:45 <span class="time-badge official">公式</span></div>
+          <div>出演</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time official">14:46〜14:51 <span class="time-badge official">公式</span></div>
+          <div>集合写真</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time official">14:54〜15:04 <span class="time-badge official">公式</span></div>
+          <div>荷物引取・更衣（2階）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time official">15:05 <span class="time-badge official">公式</span></div>
+          <div>解散</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time official">16:25 <span class="time-badge official">公式</span></div>
+          <div>表彰式開始（予定／ステージ上・一般は表彰該当団体の代表者のみ）</div>
+        </div>
+      </div>
+      <p class="muted fineprint">※出演時刻は進行により前後します。13:57までに会場集合（余裕があれば13:30頃までに到着推奨）。</p>
+    </section>
+
+    <section>
+      <div class="section-title">要点チェック <span>受付・集合・出演</span></div>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>受付</h3>
+          <p><span class="time-badge official">公式</span> 受付開始 12:00（ホールホワイエ）</p>
+          <p><span class="time-badge official">公式</span> 最終受付 13:57（出演40分前までに代表が受付・精算完了）</p>
+          <p><span class="time-badge official">公式</span> 審査用楽譜3部 提出締切 14:15（一般6〜15番／ちいよど7番）</p>
+        </div>
+        <div class="card">
+          <h3>集合</h3>
+          <p><span class="time-badge custom">団体設定</span> 09:00〜12:00 午前練習（中央生涯学習センター 第一会議室）</p>
+          <p><span class="time-badge official">公式</span> 14:04 集合（主催側指定なし／場所は当日確認して連絡します）</p>
+          <p><span class="time-badge custom">団体設定</span> 14:15 小ホール前集合</p>
+          <p>プラカード受領後、移動時は団体名が見えるよう携帯</p>
+        </div>
+        <div class="card">
+          <h3>発声・出演</h3>
+          <p><span class="time-badge official">公式</span> 発声 14:20〜14:30（1階小ホール）</p>
+          <p><span class="time-badge official">公式</span> 出演 14:37〜14:45（予定）</p>
+          <p>待機 14:32（1階 大ホール舞台下手袖）／入場: 下手袖→退場: 上手袖</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <section>
+      <div class="section-title">参加費 <span>集金</span></div>
+      <div class="card">
+        <ul class="clean">
+          <li class="check">社会人: 2,500円</li>
+          <li class="check">学生: 500円</li>
+        </ul>
+        <p class="muted fineprint">※端数は打ち上げ代に回したい</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">受付で提出・精算 <span>チェック</span></div>
+      <div class="card">
+        <ul class="clean">
+          <li class="check">2026_25回OVEC_ステージ確認表（当日提出）</li>
+          <li class="check">2026_25回OVEC_演奏利用明細書（当日提出）</li>
+          <li class="check">2026_25回OVEC_表彰式出欠および全国大会推薦確認票（当日提出）</li>
+          <li class="check">審査用楽譜3部（一般6〜15番の締切 14:15／ちいよど7番）</li>
+          <li class="check">入場券の精算（精算用封筒に残数・販売数を記入して提出）</li>
+          <li class="check">入場券は1,500円（出演団体割引 1,200円）</li>
+          <li class="check">記録用音源CD申込書（1枚1,000円・終演までに提出）</li>
+        </ul>
+        <p class="muted">受付で審査結果・講評の引換券を受領。当日人数増減がある場合は受付で精算。</p>
+      </div>
+    </section>
+    <section>
+      <div class="section-title">動線と場所 <span>会場内</span></div>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>主要ポイント</h3>
+          <ul class="clean">
+            <li class="check">受付/精算: ホールホワイエ</li>
+            <li class="check">荷物置き場/更衣: 2階（女性: 楽屋5/6/7、男性: 楽屋8〔和室〕）</li>
+            <li class="check">発声: 1階小ホール（ちいよど）</li>
+            <li class="check"><span class="time-badge custom">団体設定</span> 14:15 小ホール前集合</li>
+            <li class="check">待機: 1階 大ホール舞台下手袖</li>
+            <li class="check">入退場: 下手袖から入場、上手袖から退場</li>
+            <li class="check">集合写真: 出演後ロビー集合</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>注意事項</h3>
+          <ul class="clean">
+            <li class="check">集合場所は主催側指定なし（団体で設定）</li>
+            <li class="check">移動時はプラカードで団体名が分かるよう携帯</li>
+            <li class="check">更衣室は複数団体で共用。貴重品は置かない</li>
+            <li class="check">荷物置き場での発声練習・飲食は禁止</li>
+            <li class="check">階段移動のみ。支障がある場合は事前申告（目安: 1/20頃まで）</li>
+            <li class="check">リハーサル室は土足厳禁</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <h3>順路メモ（抜粋）</h3>
+        <ul class="clean">
+          <li class="check">受付・集合・荷物置き: 倉庫横出入口から入り、階段で2階へ</li>
+          <li class="check">発声: 小ホールは1階／リハーサル室は図書館側階段・エレベーターで地下1階</li>
+          <li class="check">待機: 倉庫横出入口から入り、楽屋1・2前通路を通って下手袖へ</li>
+          <li class="check">出演後: 上手袖→楽屋4・3前通路→小ホール横の扉→ロビー</li>
+          <li class="check">荷物引取: 倉庫横出入口から入り、階段で2階へ</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">記録・撮影 <span>公式案内</span></div>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>写真</h3>
+          <ul class="clean">
+            <li class="check">写真撮影は指定業者（大阪フォトサービス）のみ</li>
+            <li class="check">業者以外の撮影は禁止（公平な審査の妨げ）</li>
+            <li class="check">申込は当日配布の案内に従って直接手続き</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>録音・ビデオ</h3>
+          <ul class="clean">
+            <li class="check">主催者が全団体の演奏録音を実施</li>
+            <li class="check">指定業者以外の録音・ビデオ撮影は禁止</li>
+            <li class="check">記録用音源CD: 1枚1,000円（送料込み、終演までに申込）</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">表彰式 <span>お知らせより</span></div>
+      <div class="card">
+        <ul class="clean">
+          <li class="check">各日・各部門の全演奏終了後にステージ上で実施</li>
+          <li class="check">1/31(土) 16:25開始予定（青少年・一般）</li>
+          <li class="check">2/1(日) 中学校 14:40開始／高校・一般 19:00開始（参考）</li>
+          <li class="check">一般部門: 表彰該当団体の代表者1名が出席（受賞団体はその場でステージへ）</li>
+          <li class="check">中学校・高校部門: 全団体の代表者1名が出席</li>
+          <li class="check">表彰式出席者はホールホワイエ集合（中学校 14:30／高校 18:50）</li>
+          <li class="check">表彰式への出席は任意</li>
+          <li class="check">出欠は「表彰式出欠および全国大会推薦確認票」で提出</li>
+          <li class="check">欠席団体の結果等は後日郵送</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">受付で提出・精算 <span>チェック</span></div>
+      <div class="card">
+        <ul class="clean">
+          <li class="check">2026_25回OVEC_ステージ確認表（当日提出）</li>
+          <li class="check">2026_25回OVEC_演奏利用明細書（当日提出）</li>
+          <li class="check">2026_25回OVEC_表彰式出欠および全国大会推薦確認票（当日提出）</li>
+          <li class="check">審査用楽譜3部（一般6〜15番の締切 14:15／ちいよど7番）</li>
+          <li class="check">入場券の精算（精算用封筒に残数・販売数を記入して提出）</li>
+          <li class="check">入場券は1,500円（出演団体割引 1,200円）</li>
+          <li class="check">記録用音源CD申込書（1枚1,000円・終演までに提出）</li>
+        </ul>
+        <p class="muted">受付で審査結果・講評の引換券を受領。当日人数増減がある場合は受付で精算。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">参照資料・共有リンク <span>一次情報</span></div>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>参照資料（タイトルのみ）</h3>
+          <ul class="clean">
+            <li class="check">第25回大阪ヴォーカルアンサンブルコンテスト 参加団体募集要項</li>
+            <li class="check">第25回大阪ヴォーカルアンサンブルコンテスト 出演に関するお知らせ</li>
+            <li class="check">第25回大阪ヴォーカルアンサンブルコンテスト 一般部門 タイムテーブル</li>
+            <li class="check">第25回大阪ヴォーカルアンサンブルコンテスト 出演順路と平面図</li>
+            <li class="check">第25回大阪ヴォーカルアンサンブルコンテスト ステージ確認表</li>
+            <li class="check">第25回大阪ヴォーカルアンサンブルコンテスト 演奏利用明細書</li>
+            <li class="check">第25回大阪ヴォーカルアンサンブルコンテスト 表彰式出欠および全国大会推薦確認票</li>
+            <li class="check">記録用音源CD斡旋のご案内</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Google Drive 共有フォルダ</h3>
+          <div class="qr-wrap">
+            <img class="qr-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAFIAQAAAAAab1qeAAACi0lEQVR4nO1bXY/cMAhk0P7/vzwVDDjpQ6VsH2pzjW835zgjHZ6A+bAPtIfNnwLtRT5p/gj1vyM/ZlCPBmN8GAPRy2H00ykz8q3IT3KVvBVzi9v8rqdjZuT7kUByKQaJ+B2jlHZCTw+QcxySeUm9JJLQf/nXfxiS0NqZH54r5/HrpzV5CGsvw78Y5Qly+hCksXnjH37UyCkz8q3Iz00R09TTCZV7+k1NfaucPgeJ7MjO05mnyoY/iivawW+Xc4p+mvy5OhEsXYGo/PysGflWJCrITPfed3mVU2r39OZHzxrEnQKkYnTFS0koa3iKhvh2JGXrmQtVbpRp0SIVZ8g5Cskbe1fyLn1lXA+R83x/hCRTC2X483RCobMR3pfnf+39YYMMXOxFwnmtnVXAs6J6iob4diQz7iSWd6+1tKiE1HS/nEPs3aSUWinb1uu+8yXultPn5e9UWM8cio9GrMamzMgPqM9j8ZYmXkF8l0DBSTPy3UhmB73hEUTmgtr5O+Sitss5CQkwtDHJiwy+N46SWibTR8g5IX9HlUKuZL4jp66F8I0/v2IeoYcVKZWtp8quejJee3/Y0BnQLaRfJZCqh8yyON+KRJflmsN1hOF+voHb5fRBSKoc34V62Xzxu5z/AXKOQbKSyrL7i8fc6oAYP0DOIfG8hVV3VaSXzKWvVvH+lBn5ViSu3c3aPerVtCv2VpApM/JTztex999UVIqKU7OJt173/fk6q5heLOqms1Hufu8+BGlVRFJVqTuq2PVZBr71JfvKH62m1D0UVL1aRjlJQ/wYJG+FkFsub+/5EP+783WshVMKKlZR3v6g9364f7dy8L01vI433IZtt5w+BIn3/2V+0Nv0H4f8BUL3NXyn6V6+AAAAAElFTkSuQmCC" alt="Google Drive 共有フォルダのQRコード">
+            <div>
+              <div class="muted">QRコードからアクセス</div>
+              <div class="qr-url">
+                <a href="https://drive.google.com/drive/u/2/folders/1uMnZup3ytqbGVFybZ388YeyO2guPOfV2">https://drive.google.com/drive/u/2/folders/1uMnZup3ytqbGVFybZ388YeyO2guPOfV2</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
+
