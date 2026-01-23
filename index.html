@@ -97,6 +97,71 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .accordion {
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--card);
+      box-shadow: 0 8px 20px rgba(28, 22, 16, 0.08);
+      overflow: hidden;
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 800;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .summary-left {
+      display: grid;
+      gap: 4px;
+    }
+
+    .summary-title {
+      font-size: 1.05rem;
+    }
+
+    .summary-sub {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .chev {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      border: 1px solid rgba(15, 118, 110, 0.2);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      background: rgba(15, 118, 110, 0.08);
+      flex: 0 0 auto;
+      transition: transform 160ms ease;
+    }
+
+    details[open] .chev {
+      transform: rotate(180deg);
+    }
+
+    .details-body {
+      padding: 0 18px 16px;
+    }
+
     .card {
       background: var(--card);
       border: 1px solid var(--line);
@@ -141,6 +206,25 @@
       color: var(--accent);
     }
 
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.1);
+      color: var(--accent);
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid rgba(15, 118, 110, 0.18);
+    }
+
     .calendar-wrap {
       border-radius: 16px;
       overflow: hidden;
@@ -182,37 +266,38 @@
     </header>
 
     <section>
-      <div class="section-title">主要リンク <span class="badge">Quick</span></div>
-      <div class="grid cols-2">
-        <div class="card">
-          <h3>伝助（OVEC 2026 練習日程）</h3>
-          <p class="muted">出欠登録フォーム</p>
-          <div class="button-group">
-            <a class="button" href="https://densuke.biz/list?cd=4QPLXkxx7aPDDETN" target="_blank" rel="noopener">出欠登録を開く</a>
-          </div>
+      <div class="section-title">クイックアクセス <span class="badge">Quick</span></div>
+      <div class="card">
+        <div class="quick-links">
+          <a class="pill-link" href="#events">イベント一覧</a>
+          <a class="pill-link" href="#ovec2026">OVEC 2026</a>
+          <a class="pill-link" href="protected/youtube.html">練習録音（YouTube・要合言葉）</a>
+          <a class="pill-link" href="#calendar">カレンダー</a>
         </div>
-        <div class="card">
-          <h3>伝助（OVEC 2026 オンステ調査）</h3>
-          <p class="muted">出欠登録フォーム</p>
-          <div class="button-group">
-            <a class="button" href="https://densuke.biz/list?cd=Jnrncm774RWbRF7M" target="_blank" rel="noopener">出欠登録を開く</a>
+        <p class="fineprint">よく使うリンクをまとめています。イベント資料は「イベント一覧」から探せます。</p>
+      </div>
+    </section>
+
+    <section id="events">
+      <div class="section-title">イベント一覧 <span class="badge">Events</span></div>
+      <div class="accordion">
+        <details id="ovec2026" open>
+          <summary>
+            <div class="summary-left">
+              <div class="summary-title">OVEC 2026</div>
+              <div class="summary-sub">出欠（伝助）・当日の動き</div>
+            </div>
+            <span class="chev" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="details-body">
+            <div class="button-group">
+              <a class="button" href="https://densuke.biz/list?cd=4QPLXkxx7aPDDETN" target="_blank" rel="noopener">伝助（練習日程）</a>
+              <a class="button" href="https://densuke.biz/list?cd=Jnrncm774RWbRF7M" target="_blank" rel="noopener">伝助（オンステ調査）</a>
+              <a class="button outline" href="2026/25_ovec/day.html">当日の動き</a>
+            </div>
+            <p class="fineprint">※リンクが増える場合は、このセクション内に追加していきます。</p>
           </div>
-        </div>
-        <div class="card">
-          <h3>当日の動き（OVEC 25回）</h3>
-          <p class="muted">第25回大阪ヴォーカルアンサンブルコンテスト 当日の動き</p>
-          <div class="button-group">
-            <a class="button outline" href="2026/25_ovec/day.html">ページを開く</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>ちいよどカレンダー</h3>
-          <p class="muted">練習日程や本番予定を確認できます。</p>
-          <div class="button-group">
-            <a class="button" href="#calendar">ページ内で見る</a>
-            <a class="button outline" href="https://calendar.google.com/calendar/u/0/embed?src=chiiyodo@gmail.com&ctz=Asia/Tokyo" target="_blank" rel="noopener">別タブで開く</a>
-          </div>
-        </div>
+        </details>
       </div>
     </section>
 
