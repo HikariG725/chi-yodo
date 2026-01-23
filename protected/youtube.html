@@ -4,6 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ちいよど 練習録音（YouTube）</title>
+  <script>
+    (function () {
+      if (location.protocol === "file:") return;
+      const parts = location.pathname.split("/").filter(Boolean);
+      const base = parts.length ? "/" + parts[0] : "";
+      const script = document.createElement("script");
+      script.src = base + "/assets/auth.js";
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  </script>
   <style>
     :root {
       --ink: #1f1d1a;
@@ -107,46 +118,10 @@
         <a class="button outline" href="../index.html">← ちいよどぽーたるへ戻る</a>
       </div>
       <h1>ちいよど 練習録音（YouTube）</h1>
-
-      <form id="gateForm" class="row" autocomplete="off">
-        <input id="pw" type="password" inputmode="text" placeholder="合言葉" aria-label="合言葉" required>
-        <button class="button" type="submit">表示する</button>
-      </form>
-      <div id="error" class="error">合言葉が違います。</div>
+      <div class="button-group">
+        <a class="button" href="https://www.youtube.com/playlist?list=PLaz9JrXws_EcrzlnF1HQgNkU8yHw2y9ZZ" target="_blank" rel="noopener">YouTubeで開く</a>
+      </div>
     </div>
   </main>
-
-  <script>
-    const PASSWORD_SHA256_HEX = "d26ef39e288a2545f53b57eddcbbc712f8ac93b9a51c05254c02cad06b54785d";
-    const PLAYLIST_URL = "https://www.youtube.com/playlist?list=PLaz9JrXws_EcrzlnF1HQgNkU8yHw2y9ZZ";
-
-    function toHex(buffer) {
-      return Array.from(new Uint8Array(buffer)).map(b => b.toString(16).padStart(2, "0")).join("");
-    }
-
-    async function sha256Hex(text) {
-      const data = new TextEncoder().encode(text);
-      const digest = await crypto.subtle.digest("SHA-256", data);
-      return toHex(digest);
-    }
-
-    const form = document.getElementById("gateForm");
-    const pw = document.getElementById("pw");
-    const error = document.getElementById("error");
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      error.style.display = "none";
-      const input = pw.value ?? "";
-      const hash = await sha256Hex(input);
-      if (hash !== PASSWORD_SHA256_HEX) {
-        error.style.display = "block";
-        return;
-      }
-
-      pw.value = "";
-      window.location.assign(PLAYLIST_URL);
-    });
-  </script>
 </body>
 </html>
