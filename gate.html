@@ -100,7 +100,10 @@
   </main>
 
   <script>
-    const PASSWORD_SHA256_HEX = "d26ef39e288a2545f53b57eddcbbc712f8ac93b9a51c05254c02cad06b54785d";
+    const PASSWORD_SHA256_HEXES = new Set([
+      "d26ef39e288a2545f53b57eddcbbc712f8ac93b9a51c05254c02cad06b54785d",
+      "66a3a47721dab7eedc7cf96f0e15dd967bd8200825a46a621a74d5f1332480ed"
+    ]);
     const AUTH_KEY = "chiiyodo_auth_v1";
 
     function toHex(buffer) {
@@ -132,7 +135,7 @@
       error.style.display = "none";
       const input = pw.value ?? "";
       const hash = await sha256Hex(input);
-      if (hash !== PASSWORD_SHA256_HEX) {
+      if (!PASSWORD_SHA256_HEXES.has(hash)) {
         error.style.display = "block";
         return;
       }
