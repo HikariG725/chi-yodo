@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第16回関西混声合唱フェスティバル 当日の動き（ちいよど）</title>
+  <script>
+    (function () {
+      if (location.protocol === "file:") return;
+      const parts = location.pathname.split("/").filter(Boolean);
+      const base = parts.length ? "/" + parts[0] : "";
+      const script = document.createElement("script");
+      script.src = base + "/assets/auth.js";
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  </script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&display=swap");
+
+    :root {
+      --bg: #f6f7f8;
+      --surface: #ffffff;
+      --ink: #1d2733;
+      --muted: #556170;
+      --line: #d8dde4;
+      --line-strong: #b4bcc7;
+      --accent: #0f4c81;
+      --accent-soft: #e8f1f8;
+      --warn: #9a5a00;
+      --warn-soft: #fff4e4;
+      --radius: 14px;
+      --shadow: 0 8px 24px rgba(23, 40, 62, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "IBM Plex Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, #ffffff 0%, #f4f6f8 100%);
+      line-height: 1.65;
+    }
+
+    main {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 28px 18px 72px;
+    }
+
+    .back-link {
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+      margin-bottom: 14px;
+    }
+
+    .back-link:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px 22px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-family: "IBM Plex Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.36rem, 1.1rem + 1vw, 2rem);
+      line-height: 1.35;
+    }
+
+    .meta {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 14px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .banner {
+      margin-top: 14px;
+      border: 1px solid #ffd59b;
+      background: linear-gradient(90deg, #fffdf8 0%, var(--warn-soft) 100%);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+
+    .banner strong {
+      color: #7a4500;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .banner p {
+      margin: 4px 0;
+      color: #6a4a1f;
+      font-size: 0.92rem;
+    }
+
+    section {
+      margin-top: 22px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: 0 6px 14px rgba(23, 40, 62, 0.05);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.1rem;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 8px 12px;
+      font-size: 0.96rem;
+    }
+
+    .summary dt {
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .summary dd {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      min-width: 760px;
+      border: 1px solid var(--line-strong);
+      font-size: 0.92rem;
+      background: #fff;
+    }
+
+    thead th {
+      background: #f0f4f8;
+      color: #243447;
+      font-weight: 700;
+      border: 1px solid var(--line-strong);
+      padding: 9px 8px;
+      text-align: left;
+    }
+
+    tbody td {
+      border: 1px solid var(--line);
+      padding: 8px;
+      vertical-align: top;
+      word-break: break-word;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #fafbfd;
+    }
+
+    .kind-all {
+      background: var(--accent-soft);
+      font-weight: 600;
+      color: #164873;
+    }
+
+    .todo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .todo-card {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px;
+      background: #fcfdff;
+    }
+
+    .todo-card h3 {
+      margin: 0 0 8px;
+      font-size: 0.98rem;
+      color: #203145;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .info-card {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px;
+      background: #fbfcfe;
+      font-size: 0.93rem;
+      color: #3d4a5a;
+    }
+
+    .info-card h3 {
+      margin: 0 0 8px;
+      font-size: 0.98rem;
+      color: #24384f;
+    }
+
+    .checklist {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 7px;
+      color: #3f4f62;
+      font-size: 0.92rem;
+    }
+
+    .checklist li::before {
+      content: "□ ";
+      color: #4f6782;
+      font-weight: 600;
+    }
+
+    .source-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .source-list li {
+      margin: 5px 0;
+      word-break: break-all;
+    }
+
+    .note {
+      margin-top: 10px;
+      font-size: 0.88rem;
+      color: #516173;
+    }
+
+    .contacts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .contact-card {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px;
+      background: #fbfcfe;
+      font-size: 0.93rem;
+      color: #3d4a5a;
+    }
+
+    .contact-card h3 {
+      margin: 0 0 8px;
+      font-size: 0.98rem;
+      color: #24384f;
+    }
+
+    .contact-card p {
+      margin: 4px 0;
+    }
+
+    @media (max-width: 900px) {
+      .meta {
+        grid-template-columns: 1fr;
+      }
+
+      .summary {
+        grid-template-columns: 1fr;
+      }
+
+      .todo-grid,
+      .info-grid,
+      .contacts {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 12mm;
+      }
+
+      body {
+        background: #fff;
+        font-size: 9.8pt;
+      }
+
+      main {
+        max-width: none;
+        padding: 0;
+      }
+
+      .back-link {
+        display: none;
+      }
+
+      .hero,
+      section {
+        box-shadow: none;
+      }
+
+      table {
+        min-width: 0;
+        font-size: 9pt;
+      }
+
+      thead {
+        display: table-header-group;
+      }
+
+      tr,
+      td,
+      th,
+      section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back-link" href="../../index.html">← ぽーたるにもどる</a>
+
+    <header class="hero">
+      <h1>第16回関西混声合唱フェスティバル 当日の動き（ちいよど）</h1>
+      <div class="meta">
+        <div>開催日: 2026年3月8日(日)</div>
+        <div>会場: 豊中市立文化芸術センター 大ホール</div>
+        <div>出演番号: 5（ちいよど）</div>
+        <div>開演 11:00 / 終演 19:25</div>
+      </div>
+      <div class="banner" role="note" aria-label="PDF優先ノート">
+        <strong>PDF優先: 当日運用は原本PDF（主催配布資料）を正とし、このページは確認用サマリです。</strong>
+        <p>出演番号5の動線は、集合 10:37 から解散 12:17 までを優先表示しています。</p>
+      </div>
+    </header>
+
+    <section>
+      <h2>概要</h2>
+      <dl class="summary">
+        <dt>当日動線（ちいよど）</dt>
+        <dd>集合 10:37 〜 解散 12:17（出演番号5の公式タイムテーブル値）</dd>
+        <dt>大会全体</dt>
+        <dd>開演 11:00 / 終演 19:25</dd>
+        <dt>入場・受付</dt>
+        <dd>会館1階エントランスの団体受付。遅くとも集合時刻の10分前までに手続き完了。</dd>
+        <dt>基本方針</dt>
+        <dd>運用判断は主催資料を優先。差分や遅延は当日連絡で即時上書き。</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>当日練習会場・当日服装・参加費</h2>
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>当日練習会場</h3>
+          <ul class="checklist">
+            <li>未定（確定後に更新）</li>
+            <li>当日の集合後に案内された会場へ移動</li>
+            <li>会場確定まで、練習場所の個別判断はしない</li>
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>当日服装</h3>
+          <ul class="checklist">
+            <li>規定なし</li>
+            <li>動きやすく、演奏に支障のない服装を推奨</li>
+            <li>更衣時間（10:47〜11:02 / 12:12）は確保済み</li>
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>参加費</h3>
+          <ul class="checklist">
+            <li>社会人: 3,000円 / 人</li>
+            <li>学生: 2,500円 / 人</li>
+            <li>会計表の現行設定（会計表シート）に準拠</li>
+          </ul>
+          <p class="note">参照元: `2026_混フェス_会計表.xlsx`（会計表シート）</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>時刻表（table）</h2>
+      <div class="table-wrap">
+        <table aria-label="第16回関西混声合唱フェスティバル ちいよど時刻表">
+          <thead>
+            <tr>
+              <th style="width: 14%;">区分</th>
+              <th style="width: 17%;">時刻</th>
+              <th style="width: 19%;">工程</th>
+              <th style="width: 50%;">内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="kind-all">
+              <td>大会全体</td>
+              <td>11:00</td>
+              <td>開演</td>
+              <td>第16回関西混声合唱フェスティバル 開始</td>
+            </tr>
+            <tr>
+              <td>ちいよど</td>
+              <td>10:37</td>
+              <td>集合</td>
+              <td>出演者全員で集合（会館1階エントランス）</td>
+            </tr>
+            <tr>
+              <td>ちいよど</td>
+              <td>10:42</td>
+              <td>出発</td>
+              <td>団体動線に沿って更衣・リハーサル導線へ移動開始</td>
+            </tr>
+            <tr>
+              <td>ちいよど</td>
+              <td>10:47〜11:02</td>
+              <td>更衣</td>
+              <td>更衣（15分）</td>
+            </tr>
+            <tr>
+              <td>ちいよど</td>
+              <td>11:05〜11:12</td>
+              <td>多目的室</td>
+              <td>リハーサル1（7分）</td>
+            </tr>
+            <tr>
+              <td>ちいよど</td>
+              <td>11:15〜11:22</td>
+              <td>小ホール</td>
+              <td>リハーサル2（7分）</td>
+            </tr>
+            <tr>
+              <td>ちいよど</td>
+              <td>11:27</td>
+              <td>待機</td>
+              <td>下手待機へ移動</td>
+            </tr>
+            <tr>
+              <td>ちいよど</td>
+              <td>11:37〜11:48</td>
+              <td>本番</td>
+              <td>演奏（出演番号5）</td>
+            </tr>
+            <tr>
+              <td>ちいよど</td>
+              <td>11:57</td>
+              <td>写真</td>
+              <td>団体写真撮影</td>
+            </tr>
+            <tr>
+              <td>ちいよど</td>
+              <td>12:12</td>
+              <td>更衣</td>
+              <td>更衣・撤収</td>
+            </tr>
+            <tr>
+              <td>ちいよど</td>
+              <td>12:17</td>
+              <td>解散</td>
+              <td>団体解散</td>
+            </tr>
+            <tr class="kind-all">
+              <td>大会全体</td>
+              <td>19:25</td>
+              <td>終演</td>
+              <td>全団体の進行終了（閉会19:02、終演19:25の記載あり）</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">注: 当日の進行で前後する場合があります。受付・集合は早着前提で運用してください。</p>
+    </section>
+
+    <section>
+      <h2>役割別TODO</h2>
+      <div class="todo-grid">
+        <article class="todo-card">
+          <h3>代表・受付担当</h3>
+          <ul class="checklist">
+            <li>集合10分前までに団体受付を完了</li>
+            <li>ステージ確認票の提出</li>
+            <li>出演人数の増減確認と精算対応</li>
+            <li>主催からの当日連絡事項を全員へ展開</li>
+          </ul>
+        </article>
+        <article class="todo-card">
+          <h3>ステージ進行担当</h3>
+          <ul class="checklist">
+            <li>更衣・リハーサル導線の時刻管理</li>
+            <li>11:27待機に遅れないよう誘導</li>
+            <li>入場下手・退場上手の動線再確認</li>
+            <li>写真撮影後の更衣撤収を指示</li>
+          </ul>
+        </article>
+        <article class="todo-card">
+          <h3>出演者全員</h3>
+          <ul class="checklist">
+            <li>出演者証を携帯して入館</li>
+            <li>携帯電話は預け時に電源OFF</li>
+            <li>演奏中の客席出入り・席移動をしない</li>
+            <li>録音・録画・私的撮影を行わない</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>提出チェック</h2>
+      <div class="table-wrap">
+        <table aria-label="提出チェック">
+          <thead>
+            <tr>
+              <th style="width: 38%;">項目</th>
+              <th style="width: 28%;">タイミング</th>
+              <th style="width: 34%;">確認</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ステージ確認票（当日提出）</td>
+              <td>団体受付時</td>
+              <td>□ 提出済み / □ 差し替えなし</td>
+            </tr>
+            <tr>
+              <td>出演人数の増減申告・精算</td>
+              <td>団体受付時</td>
+              <td>□ 増減なし / □ 精算完了</td>
+            </tr>
+            <tr>
+              <td>出演者証・入場券セットの確認</td>
+              <td>集合前</td>
+              <td>□ 人数分確認済み</td>
+            </tr>
+            <tr>
+              <td>録音業者案内の受領</td>
+              <td>受付時</td>
+              <td>□ 受領済み</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>会場ルール</h2>
+      <ul class="checklist">
+        <li>演奏会場内での写真撮影・録音・録画（スマホ含む）は禁止。</li>
+        <li>演奏中の客席出入り・席移動は禁止。客席での飲食も不可。</li>
+        <li>館周辺を含め、リハーサル会場以外での声出しは禁止。</li>
+        <li>駐車台数に限りがあるため、公共交通機関を優先。</li>
+        <li>置きチラシは団体受付で手続き（1種類1,000円、終演時回収）。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>連絡先</h2>
+      <div class="contacts">
+        <article class="contact-card">
+          <h3>主催連絡先（関西合唱連盟）</h3>
+          <p>〒530-8211 大阪市北区中之島2-3-18 朝日新聞大阪本社内</p>
+          <p>TEL: 06-6484-6138 / FAX: 06-6229-9417</p>
+          <p>E-mail: jca.kansai@diary.ocn.ne.jp</p>
+          <p>担当: 具志堅（月・水・金 13:30〜17:30）</p>
+        </article>
+        <article class="contact-card">
+          <h3>会場</h3>
+          <p>豊中市立文化芸術センター 大ホール</p>
+          <p>〒561-0802 大阪府豊中市曽根東町3-7-2</p>
+          <p>TEL: 06-6864-3901</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>出典</h2>
+      <ul class="source-list">
+        <li>第16回関西混声合唱フェスティバル_タイムテーブル.pdf（最優先）</li>
+        <li>第16回関西混声合唱フェスティバル_出演団体向け連絡事項.pdf（最優先）</li>
+        <li>第16回関西混声合唱フェスティバル_大ホール平面図（舞台図）.pdf（最優先）</li>
+        <li>Google Drive資料: <a href="https://drive.google.com/drive/folders/1upwYMZF5flNOvjim_320eGUVRa9iK3pd" target="_blank" rel="noopener">資料（Google Drive）</a></li>
+      </ul>
+      <p class="note">このページは運用補助資料です。運営判断は必ず原本PDFの記載を優先してください。</p>
+    </section>
+  </main>
+</body>
+</html>

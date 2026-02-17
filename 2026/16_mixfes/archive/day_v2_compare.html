@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>混フェス2026 当日の動き 新デザイン比較（ちいよど）</title>
+  <script>
+    (function () {
+      if (location.protocol === "file:") return;
+      const parts = location.pathname.split("/").filter(Boolean);
+      const base = parts.length ? "/" + parts[0] : "";
+      const script = document.createElement("script");
+      script.src = base + "/assets/auth.js";
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  </script>
+  <style>
+    :root {
+      --ink: #1d222d;
+      --muted: #5f6470;
+      --accent: #0f766e;
+      --paper: #f7f6f3;
+      --card: #ffffff;
+      --line: #d9d6cf;
+      --shadow: 0 10px 24px rgba(25, 27, 31, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+      line-height: 1.7;
+      background:
+        radial-gradient(900px 260px at 10% -10%, rgba(15, 118, 110, 0.1), transparent 60%),
+        var(--paper);
+    }
+
+    main {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 28px 18px 70px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 14px;
+      padding: 6px 12px;
+      border: 1px solid rgba(15, 118, 110, 0.25);
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.08);
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .hero {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      padding: 22px 20px 18px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.4rem, 1.2vw + 1rem, 2rem);
+      line-height: 1.4;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      margin-right: 8px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.1);
+      border: 1px solid rgba(15, 118, 110, 0.2);
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    section {
+      margin-top: 22px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.14rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--card);
+      box-shadow: 0 8px 18px rgba(25, 27, 31, 0.06);
+      padding: 14px 14px 12px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(15, 118, 110, 0.35);
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .button.outline {
+      color: var(--accent);
+      background: transparent;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 720px;
+      font-size: 0.9rem;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--line);
+      padding: 10px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f1f5f4;
+      font-weight: 700;
+    }
+
+    .note {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border: 1px dashed rgba(15, 118, 110, 0.35);
+      border-radius: 10px;
+      color: #0f4f4a;
+      background: rgba(15, 118, 110, 0.06);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 980px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 12mm;
+      }
+
+      body {
+        background: #fff;
+      }
+
+      .back-link,
+      .button-group {
+        display: none;
+      }
+
+      .hero,
+      .card {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back-link" href="../../index.html">← ぽーたるにもどる</a>
+
+    <header class="hero">
+      <h1>混フェス 2026 当日の動き 新デザイン比較</h1>
+      <p class="muted">同一データ（出演番号5 / 集合10:37〜解散12:17）を3つのUIで表示しています。<strong>公式PDF優先</strong>、OCRは補助です。</p>
+      <div>
+        <span class="pill">開催日: 2026-03-08</span>
+        <span class="pill">会場: 豊中市立文化芸術センター 大ホール</span>
+        <span class="pill">OCR補正: 1:22 -> 11:22</span>
+      </div>
+      <div class="button-group">
+        <a class="button outline" href="https://drive.google.com/drive/folders/1upwYMZF5flNOvjim_320eGUVRa9iK3pd" target="_blank" rel="noopener">資料（Google Drive）</a>
+        <a class="button outline" href="../25_ovec/day.html">参考: OVEC当日の動き</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>3案</h2>
+      <div class="grid">
+        <article class="card" data-variant="a">
+          <h3>案A: 冊子風ストーリーボード</h3>
+          <p class="muted">暖色トーンで時系列を物語的に把握。運営連絡を丁寧に読みたい方向け。</p>
+          <div class="button-group">
+            <a class="button" href="day_v2_a.html">A案を開く</a>
+          </div>
+        </article>
+        <article class="card" data-variant="b">
+          <h3>案B: 会場動線マップ連動</h3>
+          <p class="muted">場所起点で確認。カードとマップの連動で、当日の移動を最短で把握。</p>
+          <div class="button-group">
+            <a class="button" href="day_v2_b.html">B案を開く</a>
+          </div>
+        </article>
+        <article class="card" data-variant="c">
+          <h3>案C: 実務ミニマル表形式</h3>
+          <p class="muted">表・チェック重視。最短確認と印刷運用を優先した実務向け。</p>
+          <div class="button-group">
+            <a class="button" href="../day.html">C案（現行版）を開く</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>比較ポイント</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>観点</th>
+              <th>案A</th>
+              <th>案B</th>
+              <th>案C</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>当日即読性</td>
+              <td>○</td>
+              <td>◎</td>
+              <td>◎</td>
+            </tr>
+            <tr>
+              <td>OVECとの差別化</td>
+              <td>冊子風の連続カードで読み物寄り</td>
+              <td>会場マップ連動で動線を可視化</td>
+              <td>実務表中心で確認速度を優先</td>
+            </tr>
+            <tr>
+              <td>印刷適性</td>
+              <td>○</td>
+              <td>○</td>
+              <td>◎</td>
+            </tr>
+            <tr>
+              <td>動線把握</td>
+              <td>○</td>
+              <td>◎</td>
+              <td>○</td>
+            </tr>
+            <tr>
+              <td>保守更新</td>
+              <td>○</td>
+              <td>○</td>
+              <td>◎</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">どの案でも、時刻・受付・提出物の最終判断は「第16回関西混声合唱フェスティバル」公式PDFを優先してください。</div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第16回関西混声合唱フェスティバル 当日の動き（ちいよど案B）</title>
+  <script>
+    (function () {
+      if (location.protocol === "file:") return;
+      const parts = location.pathname.split("/").filter(Boolean);
+      const base = parts.length ? "/" + parts[0] : "";
+      const script = document.createElement("script");
+      script.src = base + "/assets/auth.js";
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  </script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=M+PLUS+1p:wght@400;500;700&display=swap");
+
+    :root {
+      --bg: #050d18;
+      --bg-2: #0a1522;
+      --panel: #0f1f32;
+      --panel-soft: #13283f;
+      --line: #1f4060;
+      --ink: #daf6ff;
+      --muted: #8fb3ca;
+      --accent: #26d9ff;
+      --accent-2: #39a7ff;
+      --focus: 0 0 0 2px rgba(38, 217, 255, 0.32);
+      --shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "M PLUS 1p", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      line-height: 1.72;
+      background:
+        radial-gradient(1000px 520px at 12% -8%, rgba(38, 217, 255, 0.14), transparent 60%),
+        radial-gradient(920px 520px at 100% 0, rgba(57, 167, 255, 0.12), transparent 58%),
+        linear-gradient(170deg, var(--bg), var(--bg-2));
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(140, 181, 205, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(140, 181, 205, 0.06) 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 85%);
+      z-index: 0;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 18px 76px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(38, 217, 255, 0.35);
+      background: rgba(12, 31, 49, 0.78);
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .hero {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px 22px 20px;
+      background:
+        linear-gradient(145deg, rgba(19, 40, 63, 0.95), rgba(10, 25, 40, 0.95)),
+        repeating-linear-gradient(135deg, rgba(38, 217, 255, 0.06) 0 2px, transparent 2px 12px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      right: -170px;
+      top: -185px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(38, 217, 255, 0.35), rgba(38, 217, 255, 0));
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      margin: 0 0 6px;
+      font-family: "Orbitron", sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      color: #7ed8ff;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Orbitron", sans-serif;
+      font-size: clamp(1.28rem, 1.2vw + 1rem, 1.92rem);
+      line-height: 1.35;
+    }
+
+    .hero-meta {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(38, 217, 255, 0.3);
+      background: rgba(9, 24, 40, 0.88);
+      color: #b9ebff;
+      font-size: 0.84rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .top-note {
+      margin-top: 14px;
+      padding: 11px 12px;
+      border: 1px dashed rgba(38, 217, 255, 0.35);
+      border-radius: 12px;
+      background: rgba(5, 21, 34, 0.75);
+      color: #9dc6de;
+      font-size: 0.86rem;
+    }
+
+    section {
+      margin-top: 24px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.12rem;
+      font-family: "Orbitron", sans-serif;
+      line-height: 1.35;
+    }
+
+    h2 span {
+      font-size: 0.74rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(38, 217, 255, 0.32);
+      color: #8ed5f5;
+      letter-spacing: 0.04em;
+    }
+
+    .grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      background: linear-gradient(160deg, rgba(19, 41, 65, 0.95), rgba(10, 22, 35, 0.95));
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 14px 13px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+    }
+
+    .card h3 {
+      margin: 0 0 7px;
+      font-size: 0.98rem;
+      line-height: 1.4;
+      color: #bcefff;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .map-board {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px;
+      background: linear-gradient(170deg, rgba(11, 26, 42, 0.95), rgba(8, 18, 28, 0.96));
+      box-shadow: var(--shadow);
+    }
+
+    .map-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px 10px;
+    }
+
+    .map-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #5bc7f4;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      min-height: 24px;
+      opacity: 0.85;
+    }
+
+    .map-block {
+      width: 100%;
+      min-height: 76px;
+      border: 1px solid #275777;
+      border-radius: 12px;
+      background: linear-gradient(150deg, rgba(14, 38, 60, 0.96), rgba(9, 22, 35, 0.96));
+      color: var(--ink);
+      text-align: left;
+      padding: 10px;
+      font-family: inherit;
+      cursor: pointer;
+      transition: transform 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+    }
+
+    .map-block strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 0.86rem;
+      color: #bcf2ff;
+      line-height: 1.4;
+    }
+
+    .map-block small {
+      color: #8fb4cc;
+      font-size: 0.74rem;
+      line-height: 1.45;
+    }
+
+    .location-card,
+    .timeline-item {
+      cursor: pointer;
+      transition: border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+    }
+
+    .location-card:focus-visible,
+    .timeline-item:focus-visible,
+    .map-block:focus-visible {
+      outline: none;
+      box-shadow: var(--focus);
+    }
+
+    .is-active {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(38, 217, 255, 0.4), 0 12px 26px rgba(0, 0, 0, 0.33);
+      transform: translateY(-1px);
+    }
+
+    .map-block.is-active {
+      background: linear-gradient(150deg, rgba(32, 79, 110, 0.98), rgba(12, 37, 58, 0.98));
+    }
+
+    .map-status {
+      margin: 12px 0 2px;
+      font-size: 0.85rem;
+      color: #9bd6ec;
+      min-height: 1.6em;
+    }
+
+    .map-tip {
+      margin: 0;
+      color: #80a6bd;
+      font-size: 0.78rem;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 10px;
+    }
+
+    .timeline-item {
+      background: linear-gradient(160deg, rgba(19, 40, 62, 0.92), rgba(10, 22, 34, 0.92));
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px 9px;
+    }
+
+    .timeline-time {
+      font-family: "Orbitron", sans-serif;
+      font-size: 0.86rem;
+      color: #7ad8f7;
+      letter-spacing: 0.03em;
+    }
+
+    .timeline-body {
+      margin-top: 2px;
+      color: #cbebfb;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      color: #cae9f8;
+      font-size: 0.9rem;
+    }
+
+    .check-list li::before {
+      content: "▣";
+      color: #56cfff;
+      line-height: 1.2;
+      margin-top: 1px;
+      font-size: 0.84rem;
+    }
+
+    .source-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 9px;
+    }
+
+    .source-list li {
+      font-size: 0.9rem;
+      color: #c3e6f8;
+      line-height: 1.62;
+    }
+
+    .source-tag {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 8px;
+      padding: 2px 7px;
+      border: 1px solid rgba(38, 217, 255, 0.38);
+      border-radius: 999px;
+      color: #8edffc;
+      background: rgba(11, 36, 55, 0.7);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-note {
+      margin-top: 22px;
+      color: #81a6bc;
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 980px) {
+      .grid.three {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .map-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .map-arrow {
+        display: none;
+      }
+    }
+
+    @media (max-width: 700px) {
+      main {
+        padding: 20px 14px 56px;
+      }
+      .grid.two,
+      .grid.three {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        padding: 20px 16px 16px;
+      }
+      .top-note {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 10mm 10mm 14mm;
+      }
+
+      body {
+        background: #fff;
+        color: #000;
+      }
+
+      body::before {
+        display: none;
+      }
+
+      main {
+        max-width: none;
+        padding: 0;
+      }
+
+      .hero,
+      .card,
+      .timeline-item,
+      .map-board,
+      .map-block {
+        background: #fff;
+        color: #000;
+        border-color: #bbb;
+        box-shadow: none;
+      }
+
+      .back-link,
+      .map-status,
+      .map-tip,
+      .map-arrow {
+        display: none;
+      }
+
+      .map-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .chip,
+      h2 span,
+      .source-tag {
+        color: #000;
+        border-color: #999;
+        background: #fff;
+      }
+
+      .is-active {
+        transform: none;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back-link" href="../../index.html">← ぽーたるにもどる</a>
+
+    <header class="hero">
+      <p class="eyebrow">Kansai Mixed Chorus Festival / Day Flow B</p>
+      <h1>第16回関西混声合唱フェスティバル 当日の動き（ちいよど案B）</h1>
+      <div class="hero-meta">
+        <span class="chip">出演番号 5</span>
+        <span class="chip">会場: 豊中市立文化芸術センター 大ホール</span>
+        <span class="chip">開演 11:00</span>
+        <span class="chip">終演 19:25</span>
+        <span class="chip">ちいよど動線: 集合 10:37 〜 解散 12:17</span>
+      </div>
+      <p class="top-note">このページは公式 PDF を優先して作成し、OCR テキストは補助として使用しています。OCR の読取誤差がある箇所は補正注記を付けています。</p>
+    </header>
+
+    <section>
+      <h2>概要 <span>当日運用</span></h2>
+      <div class="grid two">
+        <article class="card">
+          <h3>最重要フロー</h3>
+          <p class="muted">会館1階エントランス集合 → 更衣 → 多目的室 → 小ホール → 下手袖待機 → 本番 → 写真 → 更衣 → 解散</p>
+        </article>
+        <article class="card">
+          <h3>時間帯の前提</h3>
+          <p class="muted">ちいよどの当日運用時刻は、出演団体向け資料の出演順番予定表（5番）に一致させています。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>会場動線マップ <span>data-location 連動</span></h2>
+      <div class="map-board">
+        <div class="map-grid">
+          <button class="map-block" data-location="entrance" data-label="会館1階エントランス（集合/出発）" type="button">
+            <strong>1) 1階エントランス</strong>
+            <small>10:37 集合 / 10:42 出発</small>
+          </button>
+          <div class="map-arrow">→</div>
+          <button class="map-block" data-location="dressing" data-label="更衣" type="button">
+            <strong>2) 更衣</strong>
+            <small>10:47-11:02 / 12:12</small>
+          </button>
+          <div class="map-arrow">→</div>
+
+          <button class="map-block" data-location="multipurpose" data-label="多目的室（リハーサル1）" type="button">
+            <strong>3) 多目的室</strong>
+            <small>11:05-11:12</small>
+          </button>
+          <div class="map-arrow">→</div>
+          <button class="map-block" data-location="smallhall" data-label="小ホール（リハーサル2）" type="button">
+            <strong>4) 小ホール</strong>
+            <small>11:15-11:22</small>
+          </button>
+          <div class="map-arrow">→</div>
+
+          <button class="map-block" data-location="wing" data-label="下手袖待機" type="button">
+            <strong>5) 下手袖待機</strong>
+            <small>11:27</small>
+          </button>
+          <div class="map-arrow">→</div>
+          <button class="map-block" data-location="stage" data-label="大ホール本番" type="button">
+            <strong>6) 大ホール本番</strong>
+            <small>11:37-11:48</small>
+          </button>
+          <div class="map-arrow">→</div>
+
+          <button class="map-block" data-location="photo" data-label="写真撮影" type="button">
+            <strong>7) 写真撮影</strong>
+            <small>11:57</small>
+          </button>
+          <div class="map-arrow">→</div>
+          <button class="map-block" data-location="finish" data-label="解散" type="button">
+            <strong>8) 解散</strong>
+            <small>12:17</small>
+          </button>
+        </div>
+        <p class="map-status" id="mapStatus">場所カードや時間カードをホバー/クリックすると、対応ブロックを強調します。</p>
+        <p class="map-tip">クリックで固定表示、再クリックで解除。スマホではタップ操作で同様に連動します。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>場所別カード <span>行動基準</span></h2>
+      <div class="grid three">
+        <article class="card location-card" data-location="entrance">
+          <h3>1階エントランス（集合/出発）</h3>
+          <p class="muted">10:37 全員集合。団体受付は遅くとも集合時刻の10分前までに開始し、10:42 に移動開始。</p>
+        </article>
+        <article class="card location-card" data-location="dressing">
+          <h3>更衣</h3>
+          <p class="muted">前半 10:47-11:02、後半 12:12。貴重品は団体単位でまとめて管理。</p>
+        </article>
+        <article class="card location-card" data-location="multipurpose">
+          <h3>多目的室（リハーサル1）</h3>
+          <p class="muted">11:05-11:12。リハ場所外での声出しは禁止。</p>
+        </article>
+        <article class="card location-card" data-location="smallhall">
+          <h3>小ホール（リハーサル2）</h3>
+          <p class="muted">11:15-11:22。OCRの「1:22」は 11:22 に補正して扱う。</p>
+        </article>
+        <article class="card location-card" data-location="wing">
+          <h3>下手袖待機</h3>
+          <p class="muted">11:27 待機。ステージ進行を優先し、入場は複数列でスムーズに。</p>
+        </article>
+        <article class="card location-card" data-location="stage">
+          <h3>大ホール本番</h3>
+          <p class="muted">11:37-11:48 本番。開演は 11:00、終演は 19:25（全体）。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>時間別チェック <span>10:37 - 12:17</span></h2>
+      <div class="timeline">
+        <article class="timeline-item" data-location="entrance">
+          <div class="timeline-time">10:37</div>
+          <div class="timeline-body">会館1階エントランス集合（出演番号5）</div>
+        </article>
+        <article class="timeline-item" data-location="entrance">
+          <div class="timeline-time">10:42</div>
+          <div class="timeline-body">出発（誘導に従って移動開始）</div>
+        </article>
+        <article class="timeline-item" data-location="dressing">
+          <div class="timeline-time">10:47 - 11:02</div>
+          <div class="timeline-body">更衣（前半）</div>
+        </article>
+        <article class="timeline-item" data-location="multipurpose">
+          <div class="timeline-time">11:05 - 11:12</div>
+          <div class="timeline-body">多目的室（リハーサル1）</div>
+        </article>
+        <article class="timeline-item" data-location="smallhall">
+          <div class="timeline-time">11:15 - 11:22</div>
+          <div class="timeline-body">小ホール（リハーサル2）</div>
+        </article>
+        <article class="timeline-item" data-location="wing">
+          <div class="timeline-time">11:27</div>
+          <div class="timeline-body">下手袖待機</div>
+        </article>
+        <article class="timeline-item" data-location="stage">
+          <div class="timeline-time">11:37 - 11:48</div>
+          <div class="timeline-body">本番（大ホール）</div>
+        </article>
+        <article class="timeline-item" data-location="photo">
+          <div class="timeline-time">11:57</div>
+          <div class="timeline-body">写真撮影</div>
+        </article>
+        <article class="timeline-item" data-location="dressing">
+          <div class="timeline-time">12:12</div>
+          <div class="timeline-body">更衣（後半）</div>
+        </article>
+        <article class="timeline-item" data-location="finish">
+          <div class="timeline-time">12:17</div>
+          <div class="timeline-body">解散</div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>提出/ルール <span>当日運用</span></h2>
+      <div class="grid two">
+        <article class="card">
+          <h3>提出・受付</h3>
+          <ul class="check-list">
+            <li>ステージ確認票を団体受付で提出</li>
+            <li>出演人数の増減があれば受付で精算</li>
+            <li>受付は混雑するため1団体2名までで実施</li>
+            <li>遅くとも集合時刻の10分前までに受付完了</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>会場ルール</h3>
+          <ul class="check-list">
+            <li>録音・録画（スマホ含む）は禁止</li>
+            <li>リハーサル会場以外での声出しは禁止</li>
+            <li>客席での飲食・演奏中の移動は禁止</li>
+            <li>貴重品は団体単位で預ける（自己管理放置不可）</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>出典 <span>PDF優先 / OCR補助</span></h2>
+      <div class="card">
+        <ul class="source-list">
+          <li><span class="source-tag">PDF優先</span>第16回関西混声合唱フェスティバル_タイムテーブル.pdf</li>
+          <li><span class="source-tag">PDF優先</span>第16回関西混声合唱フェスティバル_出演団体向け連絡事項.pdf</li>
+          <li><span class="source-tag">PDF優先</span>第16回関西混声合唱フェスティバル_大ホール平面図（舞台図）.pdf</li>
+          <li><span class="source-tag">OCR補助</span>上記PDFのOCR抽出テキストを照合に使用</li>
+          <li><span class="source-tag">補正注記</span>ちいよど「小ホール」終了時刻は OCR 上「1:22」と読めるため、前後時刻整合で「11:22」に補正</li>
+        </ul>
+      </div>
+      <p class="footer-note">更新時も PDF 原本を先に確認し、OCR は差分確認用途のみに使用してください。</p>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      const mapBlocks = Array.from(document.querySelectorAll(".map-block[data-location]"));
+      const triggers = Array.from(document.querySelectorAll(".location-card[data-location], .timeline-item[data-location], .map-block[data-location]"));
+      const status = document.getElementById("mapStatus");
+      let lockedLocation = null;
+
+      function locationLabel(location) {
+        const target = mapBlocks.find((block) => block.dataset.location === location);
+        return target ? (target.dataset.label || target.textContent.trim()) : location;
+      }
+
+      function applyHighlight(location) {
+        mapBlocks.forEach((block) => {
+          block.classList.toggle("is-active", Boolean(location) && block.dataset.location === location);
+        });
+        triggers.forEach((trigger) => {
+          trigger.classList.toggle("is-active", Boolean(location) && trigger.dataset.location === location);
+        });
+        if (!status) return;
+        if (!location) {
+          status.textContent = "場所カードや時間カードをホバー/クリックすると、対応ブロックを強調します。";
+          return;
+        }
+        status.textContent = "選択中: " + locationLabel(location);
+      }
+
+      function setInteractiveNode(node) {
+        const tag = node.tagName.toLowerCase();
+        if (tag === "button" || tag === "a") return;
+        node.tabIndex = 0;
+        node.setAttribute("role", "button");
+      }
+
+      triggers.forEach((node) => {
+        setInteractiveNode(node);
+        const location = node.dataset.location;
+
+        node.addEventListener("mouseenter", function () {
+          applyHighlight(location);
+        });
+        node.addEventListener("mouseleave", function () {
+          applyHighlight(lockedLocation);
+        });
+        node.addEventListener("focusin", function () {
+          applyHighlight(location);
+        });
+        node.addEventListener("focusout", function () {
+          applyHighlight(lockedLocation);
+        });
+        node.addEventListener("click", function () {
+          lockedLocation = lockedLocation === location ? null : location;
+          applyHighlight(lockedLocation);
+        });
+        node.addEventListener("keydown", function (event) {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          lockedLocation = lockedLocation === location ? null : location;
+          applyHighlight(lockedLocation);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
