@@ -1,0 +1,14 @@
+# 機密情報
+client_secret_*.json
+credentials.json
+token.json
+secrets/
+*.env
+
+# Python
+__pycache__/
+.venv/
+*.pyc
+
+# OS
+.DS_Store
